@@ -4,6 +4,7 @@ $(document).ready(function () {
      *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  */
 
     var font_style = getQueryVariable('style');
+    console.log(font_style);
     if (font_style) {
         selectFontStyle(font_style);
     }
@@ -22,18 +23,27 @@ $(document).ready(function () {
     /* Allow the User to Set Font Size
      *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  */
 
-    var font_size = getQueryVariable('style');
+    var font_size = getQueryVariable('size');
     if (font_size) {
-        selectFontStyle(font_size);
+        selectFontSize(font_size);
     }
     $('#font-size-range').on("input", function () {
         var font_size = $(this).val() + 'em';
         selectFontSize(font_size);
-        setQueryVariable('size', font_size);
+        setTimeout(setQueryVariable('size', font_size), 3000);
     });
     function selectFontSize(font_size) {
         $('.custom-name-wrapper').css('font-size', font_size);
     }
+
+    /* Allow Preset Text
+     *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  */
+
+    var text = getQueryVariable('text');
+    if (text) {
+        $('#custom-name-text').val(text);
+    }
+
 
     $('.label-text:first-child .margin-control i').click(function () {
         var margin_bottom = parseInt($(this).parents('.label-text').css('margin-bottom'));
@@ -58,28 +68,28 @@ $(document).ready(function () {
 function setQueryVariable(variable, value) {
 
     var query = window.location.search.substring(1);
-    var vars = query.split("&");
+    var vars = query.split('&');
     var replaced = false;
     for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split("=");
+        var pair = vars[i].split('=');
         if (pair[0] == variable) {
-            pair[1] == value;
-            vars[i] = pair.join("=");
+            pair[1] = value;
+            vars[i] = pair.join('=');
             replaced = true;
         }
     }
-    query = vars.join("&");
+    query = vars.join('&');
 
     if (!replaced) {
-        query += variable + '=' + value;
+        query += '&' + variable + '=' + value;
     }
-    history.pushState(null, null, query);
+    history.pushState(null, null, location.host + location.pathname + '?' + query);
 }
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
-    var vars = query.split("&");
+    var vars = query.split('&');
     for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split("=");
+        var pair = vars[i].split('=');
         if (pair[0] == variable) {
             return pair[1];
         }
