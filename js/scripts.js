@@ -22,6 +22,10 @@ $(document).ready(function () {
     /* Allow the User to Set Font Size
      *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  */
 
+    var font_size = getQueryVariable('style');
+    if (font_size) {
+        selectFontStyle(font_size);
+    }
     $('#font-size-range').on("input", function () {
         var font_size = $(this).val() + 'em';
         selectFontSize(font_size);
