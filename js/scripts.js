@@ -1,4 +1,8 @@
 $(document).ready(function () {
+
+    /* Allow the User to Set Font Style
+     *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  */
+
     var font_style = getQueryVariable('style');
     if (font_style) {
         selectFontStyle(font_style);
@@ -15,12 +19,15 @@ $(document).ready(function () {
     }
 
 
+    /* Allow the User to Set Font Size
+     *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  */
+
     $('#font-size-range').on("input", function () {
-        selectFontSize(font_size)
+        var font_size = $(this).val() + 'em';
+        selectFontSize(font_size);
         setQueryVariable('size', font_size);
     });
     function selectFontSize(font_size) {
-        var font_size = $(this).val() + 'em';
         $('.custom-name-wrapper').css('font-size', font_size);
     }
 
