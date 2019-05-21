@@ -53,6 +53,7 @@
     border-bottom: 1px solid #eee;
     line-height: 35px;
     cursor: pointer;
+    position:relative;
 }
 .font-styles li.selected:after {
     content: '\f00c';
