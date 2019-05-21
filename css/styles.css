@@ -105,9 +105,10 @@
 }
 .door-mat-design-window {
     background-image:url('images/door-mat-border-2.jpg');
-    padding:50px 75px 50px 75px;
-    height:460px;
-    background-size:cover;
+    padding: 35px 35px 35px 35px;
+    height: 428px;
+    width: 655px;
+    background-size: 730px;
     background-position: center center;
     text-align: center;
     display: flex;
