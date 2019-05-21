@@ -83,7 +83,7 @@ function setQueryVariable(variable, value) {
     if (!replaced) {
         query += '&' + variable + '=' + value;
     }
-    history.pushState(null, null, location.host + location.pathname + '?' + query);
+    history.pushState(null, null, location.pathname + '?' + query);
 }
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
