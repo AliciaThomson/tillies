@@ -103,6 +103,10 @@
 .clicker-script {
     font-family: 'Clicker Script', cursive
 }
+.door-mat-design-wrapper {
+    width:100%;
+    overflow: auto;
+}
 .door-mat-design-window {
     background-image:url('images/door-mat-border-2.jpg');
     padding: 35px 35px 35px 35px;
@@ -209,4 +213,23 @@
 }
 .door-mat-design-window #custom-name-text:-moz-placeholder { /* Firefox 18- */
     color: #000;
+}
+
+@media screen and (max-width: 1200px) {
+    .door-mat-design-window {
+        transform: scale(0.9);
+        transform-origin: left;
+    }
+}
+@media screen and (max-width: 768px) {
+
+    .door-mat-design-window {
+        transform: scale(0.7);
+    }
+}
+@media screen and (max-width: 500px) {
+
+    .door-mat-design-window {
+        transform: scale(0.53);
+    }
 }

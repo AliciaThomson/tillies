@@ -10,8 +10,10 @@ $(document).ready(function () {
     }
     $('.font-styles li').click(function () {
         var font_style = $(this).attr('class');
-        selectFontStyle(font_style);
-        setQueryVariable('style', font_style);
+        if (!$(this).hasClass('selected')) {
+            selectFontStyle(font_style);
+            setQueryVariable('style', font_style);
+        }
     });
     function selectFontStyle(font_style) {
         $('#custom-name-text').attr({ 'class': font_style });
