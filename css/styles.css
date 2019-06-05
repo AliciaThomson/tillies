@@ -89,9 +89,12 @@
 }
 .hugs-and-kisses {
     font-family: 'HugsandKisses', cursive;
+    line-height: 1.2 !important;
 }
 .laughing-and-smiling {
     font-family: 'LaughingandSmiling', cursive;
+    line-height: 2 !important;
+    font-size: 0.75em;
 }
 .cookie {
     font-family: 'Cookie', cursive;
