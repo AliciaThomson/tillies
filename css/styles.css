@@ -87,6 +87,12 @@
 .great-vibes {
     font-family: 'Great Vibes', cursive;
 }
+.hugs-and-kisses {
+    font-family: 'HugsandKisses', cursive;
+}
+.laughing-and-smiling {
+    font-family: 'LaughingandSmiling', cursive;
+}
 .cookie {
     font-family: 'Cookie', cursive;
     font-size:1.3em
@@ -236,4 +242,18 @@
     .door-mat-design-window {
         transform: scale(0.53);
     }
+}
+
+/* Custom Fonts */
+@font-face {
+    font-family: 'HugsandKisses';
+    src: url('fonts/HugsandKisses.eot?#iefix') format('embedded-opentype'),  url('fonts/HugsandKisses.woff') format('woff'), url('fonts/HugsandKisses.ttf')  format('truetype'), url('fonts/HugsandKisses.svg#HugsandKisses') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LaughingandSmiling';
+    src: url('fonts/LaughingandSmiling.eot?#iefix') format('embedded-opentype'),  url('fonts/LaughingandSmiling.woff') format('woff'), url('fonts/LaughingandSmiling.ttf')  format('truetype'), url('fonts/LaughingandSmiling.svg#LaughingandSmiling') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
