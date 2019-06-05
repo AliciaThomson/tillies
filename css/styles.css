@@ -147,7 +147,7 @@
 }
 .door-mat-design-window .custom-text .label-text {
     text-transform: uppercase;
-    font-size: 2em;
+    font-size: 1.85em;
     font-weight: 500;
     margin: 5px 0;
     display: block;
@@ -163,7 +163,7 @@
     width: 100%;
     font-weight: 500; 
     top: 4px;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
 }
 .door-mat-design-window .custom-text #custom-date {
     background: transparent;
