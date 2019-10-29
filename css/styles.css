@@ -116,6 +116,9 @@
 .clicker-script {
     font-family: 'Clicker Script', cursive
 }
+.egregio {
+  font-family: 'Egregio', cursive
+}
 .door-mat-design-wrapper {
     width:100%;
     overflow: auto;
@@ -259,4 +262,10 @@
     src: url('fonts/LaughingandSmiling.eot?#iefix') format('embedded-opentype'),  url('fonts/LaughingandSmiling.woff') format('woff'), url('fonts/LaughingandSmiling.ttf')  format('truetype'), url('fonts/LaughingandSmiling.svg#LaughingandSmiling') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+@font-face {
+  font-family: 'Egregio';
+  src: url('fonts/EgregioScript.eot?#iefix') format('embedded-opentype'),  url('fonts/EgregioScript.woff') format('woff'), url('fonts/EgregioScript.ttf')  format('truetype'), url('fonts/EgregioScript.svg#EgregioScript') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
